@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app='Portfolio'>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre|Trirong:700" rel="stylesheet">
+    <title>Catalina Astengo: Full-Stack Web Developer</title>
+  </head>
+  <body>
+
+
+    <div class="container-fluid">
+      <div class="title text-center">
+        <h1>Catalina Astengo</h1>
+        <p>Full-Stack Web Developer</p>
+      </div>
+
+      <ul class="nav nav-pills">
+        <li><a ui-sref="home" ui-sref-active="active">Home</a></li>
+        <li><a ui-sref="projects" ui-sref-active="active">Projects</a></li>
+        <li><a ui-sref="courses" ui-sref-active="active">Web Dev Courses</a></li>
+        <li><a ui-sref="education" ui-sref-active="active">Education</a></li>
+        <li><a ui-sref="experience" ui-sref-active="active">Other Experience</a></li>
+        <li><a ui-sref="#" ui-sref-active="active">Contact</a></li>
+      </ul>
+      <ui-view></ui-view>
+    </div>
+
+    <!-- Libraries -->
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+
+    <!-- Modules -->
+    <script src="src/portfolio/portfolio.module.js"></script>
+
+    <!-- Routes -->
+    <script src="src/routes.js"></script>
+
+    <!-- 'Data' module artifacts-->
+    <script src="src/portfolio/section.service.js"></script>
+    <script src="src/portfolio/section.controller.js"></script>
+    <script src="src/portfolio/project.controller.js"></script>
+    <script src="src/portfolio/section.component.js"></script>
+    <script src="src/portfolio/project.component.js"></script>
+
+  </body>
+</html>

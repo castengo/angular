@@ -1,0 +1,26 @@
+body {
+  font-family: 'Abhaya Libre', serif;
+  font-size: 22px;
+}
+
+h1, h2, h3 {
+  font-family: 'Trirong', serif;
+  font-weight: 700;
+}
+
+.title {
+  text-transform: uppercase;
+}
+
+.nav {
+  text-transform: uppercase;
+}
+
+
+.jumbotron-background {
+  background-image: url("/images/jumbotron.jpg");
+}
+
+.jumbotron {
+  background: none;
+}
