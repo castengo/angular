@@ -1,0 +1,97 @@
+{ "projects": [
+  {
+    "id": 1,
+    "name": "Wedding Website",
+    "image": "../images/project1.png",
+    "frameworks": [
+      {
+        "name": "HTML5",
+        "logo_url": "https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png"
+      },
+      {
+        "name": "CSS3",
+        "logo_url": "http://wpguru.co.uk/wp-content/uploads/2013/09/CSS-Logo-214x300.png"
+      },
+      {
+        "name": "jQuery",
+        "logo_url": "http://precision-software.com/wp-content/uploads/2014/04/jQurery.gif"
+      },
+      {
+        "name": "PHP",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2000px-PHP-logo.svg.png"
+        },
+        {
+          "name": "mySQL",
+          "logo_url": "http://logodatabases.com/wp-content/uploads/2012/03/mysql-logo-wallpaper.jpg"
+        }
+    ],
+    "description": "My very first project, the wedding website provides information about the event to the guests. Through the use of an RSVP form with an animated menu, guests are able to RSVP online and list of attendees can be easily accessed by the event planner with the use of an obscure url. The website also connected guests with paypal for secure cash gifts.",
+    "url": ""
+  },
+  {
+    "id": 2,
+    "name": "Verbena Makeup",
+    "image": "../images/project2.png",
+    "frameworks": [
+      { "name": "Ruby on Rails",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/Ruby_on_Rails.svg/791px-Ruby_on_Rails.svg.png"
+      },
+      {
+        "name": "Boostrap",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Boostrap_logo.svg/2000px-Boostrap_logo.svg.png"
+      },
+      {
+        "name": "jQuery",
+        "logo_url": "http://precision-software.com/wp-content/uploads/2014/04/jQurery.gif"
+      },
+      {
+        "name": "AJAX",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/AJAX_logo_by_gengns.svg/2000px-AJAX_logo_by_gengns.svg.png"
+      },
+      {
+        "name": "Javascript",
+        "logo_url": "http://www.brandsoftheworld.com/sites/default/files/styles/logo-thumbnail/public/082014/js1_0.png?itok=BqOjTfHU"
+      },
+      {
+        "name": "HTML5",
+        "logo_url": "https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png"
+      },
+      {
+        "name": "CSS3",
+        "logo_url": "http://wpguru.co.uk/wp-content/uploads/2013/09/CSS-Logo-214x300.png"
+      }],
+    "additional": ["devise", "postgresql"],
+    "description": "Verbena is a fun web application that facilitates the search of makeup products by connecting users directly with the shades and products used to create a certain makeup look. Connected to a postgresql database and soon web services, the data is fetched and displayed dynamically to the users. Users are able to create a profile and share make up looks or just have an account to save their favorite looks, products, or shades.",
+    "url": ""
+  },
+  {
+    "id": 3,
+    "name": "Portfolio",
+    "image": "../images/project3.png",
+    "frameworks": [
+      {
+        "name": "Angular JS",
+        "logo_url": "https://avatars0.githubusercontent.com/u/139426?v=3&s=400"
+      },
+      {
+        "name": "Boostrap",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Boostrap_logo.svg/2000px-Boostrap_logo.svg.png"
+      },
+      {
+        "name": "Javascript",
+        "logo_url": "http://www.brandsoftheworld.com/sites/default/files/styles/logo-thumbnail/public/082014/js1_0.png?itok=BqOjTfHU"
+      },
+      {
+        "name": "HTML5",
+        "logo_url": "https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png"
+      },
+      {
+        "name": "CSS3",
+        "logo_url": "http://wpguru.co.uk/wp-content/uploads/2013/09/CSS-Logo-214x300.png"
+      }
+    ],
+    "additional": ["UI-Router"],
+    "description": "The page you are viewing right now, my portfolio, is my first Angular JS project. This single page web application displays the information asynchronously from a data file to the user. UI-router is used for the routes while Bootstrap and some custom CSS are used to customize the views. The user can view a list of the projects and click on the link to view the actual page.",
+    "url": ""
+  }
+]}

@@ -1,4 +1,16 @@
-
-<section title="section.title" image-url="section.image_url" image-webpage="section.image_webpage" description="section.description" frameworks="section.frameworks"></section>
-<projects project-list="section.project_list" ></projects>
-<ui-view></ui-view>
+<div class="projects" id="projects">
+  <div class="title text-center">
+    <h2>Website Projects</h2>
+    <div class="center-block">
+      <div class="little-circle"></div>
+      <div class="little-circle"></div>
+      <div class="little-circle"></div>
+    </div>
+  </div>
+  <div class="project-list">
+    <projects project-list="projectList.projectList" ></projects>
+  </div>
+  <div ui-view='projectDetail'>
+    <i>Select a project to view more details!</i>
+  </div>
+</div>

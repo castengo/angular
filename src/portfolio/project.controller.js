@@ -9,7 +9,9 @@ function ProjectController(project) {
   var projectInfo = this;
   projectInfo.name = project.name;
   projectInfo.description = project.description;
-  projectInfo.additional = project.additional;
+  projectInfo.frameworks = project.frameworks;
+  projectInfo.url = project.url;
+
 };
 
 })();

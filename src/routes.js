@@ -3,100 +3,78 @@
 angular.module('Portfolio')
 .config(RoutesConfig);
 
-RoutesConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
-function RoutesConfig($stateProvider, $urlRouterProvider) {
+RoutesConfig.$inject = ['$stateProvider', '$urlRouterProvider', '$anchorScrollProvider'];
+function RoutesConfig($stateProvider, $urlRouterProvider, $anchorScrollProvider) {
 
   // Redirect to tab 1 if no other URL matches
   $urlRouterProvider.otherwise('/');
 
+  // Prevent auto scrolling after using anchorScroll()
+  $anchorScrollProvider.disableAutoScrolling();
+
   // Set up UI states
   $stateProvider
+
     .state('home', {
       url: '/',
       templateUrl: 'src/templates/home.html'
     })
 
-    .state('education', {
-      url: '/education',
-      templateUrl: 'src/templates/section.html',
-      controller: 'SectionController as section',
-      resolve: {
-        section: ['SectionService', function (service) {
-          return service.getEducation();
-        }]
-      }
-    })
-
-    .state('courses', {
-      url: '/courses',
-      templateUrl: 'src/templates/section.html',
-      controller: 'SectionController as section',
-      resolve: {
-        section: ['SectionService', function (service) {
-          return service.getCourses();
-        }]
-      }
-    })
-
-    .state('experience', {
-      url: '/experience',
-      templateUrl: 'src/templates/section.html',
-      controller: 'SectionController as section',
-      resolve: {
-        section: ['SectionService', function (service) {
-          return service.getExperience();
-        }]
-      }
-    })
-
     .state('projects', {
       url: '/projects',
-      templateUrl: 'src/templates/projects.html',
-      controller: 'SectionController as section',
+      views: {
+        "": {
+          templateUrl: 'src/templates/project-section.html',
+          controller: 'ProjectListController as projectList'
+        },
+        'projectList': {
+          templateUrl: 'src/templates/projects.html',
+          controller: 'ProjectListController as projectList'
+        }
+      },
       resolve: {
-        section: ['SectionService', function (service) {
-          return service.getProjects();
+        projects: ['DataService', function (service) {
+          return service.getSection('Projects');
+        }],
+        projectList: ['DataService', function (service) {
+          return service.getAllProjects();
         }]
       }
+    })
+
+    .state('contact', {
+      url: '/contact',
+      templateUrl: 'src/templates/contact.html',
+      // controller: 'SectionController as section',
+    })
+
+    .state('section', {
+      url: '/{title}',
+      templateUrl: 'src/templates/section.html',
+      controller: 'SectionController as section',
+      resolve: {
+        section: ['$stateParams','DataService', function ($stateParams, service) {
+          return service.getSection($stateParams.title);
+        }]
+      }
+
     })
 
     .state('projects.project', {
-      url: '/{projectNumber}',
-      templateUrl: 'src/templates/project-description.html',
-      controller: 'ProjectController as project',
+      url: '/{id}',
+      views: {
+        'projectDetail': {
+          templateUrl: 'src/templates/project-description.html',
+          controller: 'ProjectController as project'
+        }
+      },
       resolve: {
-        project: ['$stateParams','SectionService', function ($stateParams, service) {
-          console.log($stateParams.projectNumber);
-          return service.getCertainProject($stateParams.projectNumber);
+        project: ['$stateParams','DataService', function ($stateParams, service) {
+          return service.getCertainProject($stateParams.id);
         }]
       }
     })
 
-
-    // .state('categories', {
-    //   url: '/categories',
-    //   templateUrl: 'src/templates/categories.html',
-    //   controller: 'CategoriesController as menu',
-    //   resolve: {
-    //     categories: ['MenuDataService', function (service) {
-    //       return service.getAllCategories();
-    //     }]
-    //   }
-    // })
-
-    // .state('items', {
-    //   url: '/items/{shortName}',
-    //   templateUrl: "src/templates/items.html",
-    //   controller: 'ItemsController as category',
-    //   resolve: {
-    //     items: ['$stateParams','MenuDataService', function ($stateParams, MenuDataService) {
-    //       return MenuDataService.getItemsForCategory($stateParams.shortName);
-    //     }]
-    //   },
-    //   params: {
-    //     categoryName: ""
-    //   }
-    // })
 }
 
 })();
