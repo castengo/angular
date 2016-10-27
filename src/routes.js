@@ -38,7 +38,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider, $anchorScrollProvider)
         }],
         projectList: ['DataService', function (service) {
           return service.getAllProjects();
-        }]
+        }],
       }
     })
 

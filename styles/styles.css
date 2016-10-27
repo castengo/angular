@@ -6,11 +6,40 @@ h1, h2, h3 {
   font-weight: 700;
   padding: 10px; }
 
-a:hover, a.active {
+a:hover, a:active {
   text-decoration: none; }
 
-hr {
-  margin-top: 50px; }
+.cyan-purple, .circle, a.square, .projects .project-list .project-detail {
+  font-family: 'Oswald', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 1px 1px #000000;
+  box-shadow: 2px 2px 5px #888888;
+  background: rgba(86, 182, 194, 0.7);
+  background: -webkit-radial-gradient(circle, rgba(86, 182, 194, 0.7), #56b6c2);
+  background: -o-radial-gradient(circle, rgba(86, 182, 194, 0.7), #56b6c2);
+  background: -moz-radial-gradient(circle, rgba(86, 182, 194, 0.7), #56b6c2);
+  background: radial-gradient(circle, rgba(86, 182, 194, 0.7), #56b6c2);
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -ms-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s; }
+  .cyan-purple:hover, .circle:hover, a.square:hover, .projects .project-list .project-detail:hover {
+    color: white;
+    opacity: 0.6; }
+  .cyan-purple.active, .active.circle, a.active.square, .projects .project-list .active.project-detail {
+    color: white;
+    background: rgba(140, 92, 159, 0.7);
+    background: -webkit-radial-gradient(circle, rgba(140, 92, 159, 0.7), #8c5c9f);
+    background: -o-radial-gradient(circle, rgba(140, 92, 159, 0.7), #8c5c9f);
+    background: -moz-radial-gradient(circle, rgba(140, 92, 159, 0.7), #8c5c9f);
+    background: radial-gradient(circle, rgba(140, 92, 159, 0.7), #8c5c9f); }
+
+.vertical-align, .section .section-content, .circle p {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); }
 
 .title {
   text-transform: uppercase;
@@ -41,46 +70,26 @@ hr {
     background: radial-gradient(circle, rgba(224, 108, 117, 0.7), #e06c75); }
 
 .section {
-  height: 420px;
-  border-radius: 5px; }
-  .section .section-content {
-    position: relative;
-    top: 40%;
-    transform: translateY(-40%); }
-    .section .section-content p {
-      text-align: justify;
-      padding: 10px; }
+  height: 420px; }
+  .section h1 {
+    margin-top: 10px; }
+  .section .section-content h2 {
+    margin: 0; }
+  .section .section-content p {
+    text-align: justify;
+    padding: 10px; }
 
 .circle {
-  font-family: 'Oswald', sans-serif;
-  color: white;
   border-radius: 50%;
   width: 130px;
   height: 130px;
   text-align: center;
   margin: auto;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  text-shadow: 1px 1px #000000;
-  box-shadow: 2px 2px 5px #888888;
-  background: rgba(86, 182, 194, 0.7);
-  background: -webkit-radial-gradient(circle, rgba(86, 182, 194, 0.7), #56b6c2);
-  background: -o-radial-gradient(circle, rgba(86, 182, 194, 0.7), #56b6c2);
-  background: -moz-radial-gradient(circle, rgba(86, 182, 194, 0.7), #56b6c2);
-  background: radial-gradient(circle, rgba(86, 182, 194, 0.7), #56b6c2);
-  -webkit-transition: opacity 0.5s;
-  -moz-transition: opacity 0.5s;
-  -ms-transition: opacity 0.5s;
-  -o-transition: opacity 0.5s;
-  transition: opacity 0.5s; }
+  margin-bottom: 10px; }
   .circle p {
-    position: relative;
-    top: 40%;
     font-weight: 700;
     font-size: 20px;
     text-transform: uppercase; }
-  .circle:hover {
-    opacity: 0.6; }
 
 .active .circle {
   background: rgba(140, 92, 159, 0.7);
@@ -91,6 +100,18 @@ hr {
 
 .glyphicon {
   margin-top: 10px; }
+
+.mobile-nav {
+  margin-bottom: 30px; }
+
+a.square {
+  display: inline-block;
+  height: 75px;
+  width: 75px;
+  border-radius: 5px; }
+  a.square span {
+    position: relative;
+    top: 20px; }
 
 #contact {
   -ms-transform: rotate(35deg);
@@ -105,40 +126,21 @@ hr {
   padding: 20px;
   min-height: 720px;
   text-align: center; }
+  .projects .mobile-project-list {
+    display: none; }
   .projects .project-list {
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
     display: inline-block;
     padding: 10px; }
-    .projects .project-list .active .project-detail {
-      background: rgba(140, 92, 159, 0.7);
-      background: -webkit-radial-gradient(circle, rgba(140, 92, 159, 0.7), #8c5c9f);
-      background: -o-radial-gradient(circle, rgba(140, 92, 159, 0.7), #8c5c9f);
-      background: -moz-radial-gradient(circle, rgba(140, 92, 159, 0.7), #8c5c9f);
-      background: radial-gradient(circle, rgba(140, 92, 159, 0.7), #8c5c9f); }
     .projects .project-list .project-detail {
       display: inline-block;
+      border-radius: 5px;
       width: 200px;
       margin: 3px;
-      vertical-align: top;
-      box-shadow: 1px 1px 5px #000000;
-      background: rgba(86, 182, 194, 0.7);
-      background: -webkit-radial-gradient(circle, rgba(86, 182, 194, 0.7), #56b6c2);
-      background: -o-radial-gradient(circle, rgba(86, 182, 194, 0.7), #56b6c2);
-      background: -moz-radial-gradient(circle, rgba(86, 182, 194, 0.7), #56b6c2);
-      background: radial-gradient(circle, rgba(86, 182, 194, 0.7), #56b6c2);
-      -webkit-transition: opacity 0.5s;
-      -moz-transition: opacity 0.5s;
-      -ms-transition: opacity 0.5s;
-      -o-transition: opacity 0.5s;
-      transition: opacity 0.5s; }
+      vertical-align: top; }
       .projects .project-list .project-detail p {
-        text-transform: uppercase;
-        padding-top: 5px;
-        color: white;
-        text-shadow: 1px 1px #000000; }
-      .projects .project-list .project-detail:hover {
-        opacity: 0.6; }
+        padding-top: 5px; }
       .projects .project-list .project-detail img {
         padding: 10px;
         height: 150px; }
@@ -155,7 +157,7 @@ hr {
       top: 20px;
       right: 20px; }
       .projects .project-description .frameworks img {
-        height: 50px; }
+        height: 45px; }
     .projects .project-description p {
       padding: 10px; }
 
@@ -190,5 +192,39 @@ footer {
     position: relative;
     top: 50%;
     transform: translateY(-50%); }
+
+@media (max-width: 991px) {
+  .my-nav {
+    display: none; }
+
+  .projects {
+    margin: 10px; }
+    .projects .project-list {
+      display: none; }
+    .projects .mobile-project-list {
+      display: block; }
+    .projects .project-description h2 {
+      margin-bottom: 5px; }
+    .projects .project-description .frameworks {
+      position: relative;
+      top: 0;
+      right: 0;
+      padding: 5px;
+      margin-bottom: 40px; }
+      .projects .project-description .frameworks img {
+        height: 30px; }
+
+  .section {
+    height: auto; }
+    .section .section-content {
+      position: relative;
+      top: 0;
+      transform: none; }
+
+  div[ui-view='projectDetail'] {
+    display: none; }
+
+  .contact {
+    text-align: center; } }
 
 /*# sourceMappingURL=styles.css.map */

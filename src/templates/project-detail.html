@@ -1,7 +1,5 @@
 
-<a ui-sref="projects.project({id: project.id})" ui-sref-active="active" ng-repeat="project in $ctrl.projectList">
-  <div class="project-detail">
+<a class="project-detail pretty-link" ui-sref="projects.project({id: project.id})" ui-sref-active="active" ng-repeat="project in $ctrl.projectList">
     <img ng-src="{{project.image}}" alt="..."/>
     <p>{{project.name}}</p>
-  </div>
 </a>
