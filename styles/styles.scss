@@ -43,7 +43,7 @@ h1, h2, h3 {
 }
 
 a {
-  &:hover, &:active {
+  &:hover, &:active, &:focus {
     text-decoration: none;
   }
 }
@@ -116,10 +116,6 @@ a {
 .section {
   height: 420px;
 
-  h1 {
-    margin-top: 10px;
-  }
-
   .section-content {
     @extend .vertical-align;
 
@@ -134,6 +130,10 @@ a {
 }
 
 // Navigation
+
+.mobile-nav {
+  display: none;
+}
 
 .circle {
   @extend .cyan-purple;
@@ -155,6 +155,9 @@ a {
 .active {
   .circle {
     @include radial-gradient-background(transparentize($purple, 0.3), transparentize($purple, 0));
+    p {
+      text-decoration: none;
+    }
   }
 }
 
@@ -165,19 +168,20 @@ a {
 //Mobile navigation
 
 .mobile-nav {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 a.square {
   @extend .cyan-purple;
   display: inline-block;
-  height: 75px;
-  width: 75px;
+  height: 60px;
+  width: 60px;
   border-radius: 5px;
+  margin-bottom: 15px;
 
   span {
     position: relative;
-    top: 20px;
+    top: 10px;
   }
 }
 
@@ -252,6 +256,7 @@ a.square {
 
     p {
       padding: 10px;
+      text-align: justify;
     }
   }
 }
@@ -292,6 +297,15 @@ footer {
 // Media Queries
 
 @media (max-width: 991px) {
+
+  body {
+    font-size: 22px;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+
   .my-nav {
     display: none;
   }
@@ -333,8 +347,13 @@ footer {
       position: relative;
       top: 0;
       transform: none;
+
+      h1 {
+        padding-top: 100px;
+      }
     }
   }
+
 
   div[ui-view='projectDetail'] {
     display: none;

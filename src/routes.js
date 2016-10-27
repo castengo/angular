@@ -3,8 +3,8 @@
 angular.module('Portfolio')
 .config(RoutesConfig);
 
-RoutesConfig.$inject = ['$stateProvider', '$urlRouterProvider', '$anchorScrollProvider'];
-function RoutesConfig($stateProvider, $urlRouterProvider, $anchorScrollProvider) {
+RoutesConfig.$inject = ['$stateProvider', '$urlRouterProvider', '$anchorScrollProvider', '$locationProvider'];
+function RoutesConfig($stateProvider, $urlRouterProvider, $anchorScrollProvider, $locationProvider) {
 
   // Redirect to tab 1 if no other URL matches
   $urlRouterProvider.otherwise('/');
@@ -74,6 +74,9 @@ function RoutesConfig($stateProvider, $urlRouterProvider, $anchorScrollProvider)
         }]
       }
     })
+
+    // Remove # from url
+    $locationProvider.html5Mode(true);
 
 }
 

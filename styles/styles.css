@@ -6,7 +6,7 @@ h1, h2, h3 {
   font-weight: 700;
   padding: 10px; }
 
-a:hover, a:active {
+a:hover, a:active, a:focus {
   text-decoration: none; }
 
 .cyan-purple, .circle, a.square, .projects .project-list .project-detail {
@@ -71,13 +71,14 @@ a:hover, a:active {
 
 .section {
   height: 420px; }
-  .section h1 {
-    margin-top: 10px; }
   .section .section-content h2 {
     margin: 0; }
   .section .section-content p {
     text-align: justify;
     padding: 10px; }
+
+.mobile-nav {
+  display: none; }
 
 .circle {
   border-radius: 50%;
@@ -97,21 +98,24 @@ a:hover, a:active {
   background: -o-radial-gradient(circle, rgba(140, 92, 159, 0.7), #8c5c9f);
   background: -moz-radial-gradient(circle, rgba(140, 92, 159, 0.7), #8c5c9f);
   background: radial-gradient(circle, rgba(140, 92, 159, 0.7), #8c5c9f); }
+  .active .circle p {
+    text-decoration: none; }
 
 .glyphicon {
   margin-top: 10px; }
 
 .mobile-nav {
-  margin-bottom: 30px; }
+  margin-bottom: 15px; }
 
 a.square {
   display: inline-block;
-  height: 75px;
-  width: 75px;
-  border-radius: 5px; }
+  height: 60px;
+  width: 60px;
+  border-radius: 5px;
+  margin-bottom: 15px; }
   a.square span {
     position: relative;
-    top: 20px; }
+    top: 10px; }
 
 #contact {
   -ms-transform: rotate(35deg);
@@ -159,7 +163,8 @@ a.square {
       .projects .project-description .frameworks img {
         height: 45px; }
     .projects .project-description p {
-      padding: 10px; }
+      padding: 10px;
+      text-align: justify; }
 
 .btn-default {
   color: white;
@@ -194,6 +199,12 @@ footer {
     transform: translateY(-50%); }
 
 @media (max-width: 991px) {
+  body {
+    font-size: 22px; }
+
+  .mobile-nav {
+    display: block; }
+
   .my-nav {
     display: none; }
 
@@ -220,11 +231,10 @@ footer {
       position: relative;
       top: 0;
       transform: none; }
+      .section .section-content h1 {
+        padding-top: 100px; }
 
   div[ui-view='projectDetail'] {
-    display: none; }
-
-  .contact {
-    text-align: center; } }
+    display: none; } }
 
 /*# sourceMappingURL=styles.css.map */
