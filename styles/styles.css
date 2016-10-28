@@ -135,13 +135,6 @@ a.square {
     position: relative;
     top: 10px; }
 
-#contact {
-  -ms-transform: rotate(35deg);
-  /* IE 9 */
-  -webkit-transform: rotate(35deg);
-  /* Chrome, Safari, Opera */
-  transform: rotate(35deg); }
-
 .projects {
   margin: 20px 100px;
   border-radius: 10px;

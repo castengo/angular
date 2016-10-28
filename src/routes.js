@@ -81,7 +81,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider, $anchorScrollProvider,
     })
 
     // Remove # from url
-    $locationProvider.html5Mode(true);
+    // $locationProvider.html5Mode(true);
 
 }
 
