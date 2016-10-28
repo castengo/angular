@@ -69,6 +69,21 @@ a:hover, a:active, a:focus {
     background: -moz-radial-gradient(circle, rgba(224, 108, 117, 0.7), #e06c75);
     background: radial-gradient(circle, rgba(224, 108, 117, 0.7), #e06c75); }
 
+.social-media {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  font-size: 40px; }
+  .social-media a {
+    color: #e06c75;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -ms-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s; }
+    .social-media a:hover {
+      opacity: 0.6; }
+
 .section {
   height: 420px; }
   .section .section-content h2 {
@@ -76,6 +91,9 @@ a:hover, a:active, a:focus {
   .section .section-content p {
     text-align: justify;
     padding: 10px; }
+  .section .section-content li {
+    list-style: none;
+    text-align: left; }
 
 .mobile-nav {
   display: none; }
@@ -233,6 +251,14 @@ footer {
       transform: none; }
       .section .section-content h1 {
         padding-top: 100px; }
+
+  .social-media {
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    text-align: right; }
+    .social-media a {
+      display: block; }
 
   div[ui-view='projectDetail'] {
     display: none; } }

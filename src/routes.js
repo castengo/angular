@@ -20,6 +20,11 @@ function RoutesConfig($stateProvider, $urlRouterProvider, $anchorScrollProvider,
       templateUrl: 'src/templates/home.html'
     })
 
+    .state('courses', {
+      url: '/courses',
+      templateUrl: 'src/templates/courses.html'
+    })
+
     .state('projects', {
       url: '/projects',
       views: {

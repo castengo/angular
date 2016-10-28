@@ -110,6 +110,20 @@ a {
   }
 }
 
+.social-media {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  font-size: 40px;
+  a {
+    color: $red;
+    @include transition(opacity);
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
 
 // Sections
 
@@ -125,6 +139,11 @@ a {
     p {
       text-align: justify;
       padding: 10px;
+    }
+
+    li {
+      list-style: none;
+      text-align: left;
     }
   }
 }
@@ -354,6 +373,15 @@ footer {
     }
   }
 
+  .social-media {
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    text-align: right;
+    a {
+      display: block;
+    }
+  }
 
   div[ui-view='projectDetail'] {
     display: none;

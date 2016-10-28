@@ -26,7 +26,7 @@
         }
     ],
     "description": "My very first project, the wedding website provides information about the event to the guests. Through the use of an RSVP form with an animated menu, guests are able to RSVP online and list of attendees can be easily accessed by the event planner with the use of an obscure url. The website also connected guests with paypal for secure cash gifts.",
-    "url": ""
+    "url": "../portfolio/wedding-website/index.html"
   },
   {
     "id": 2,
@@ -62,7 +62,7 @@
       }],
     "additional": ["devise", "postgresql"],
     "description": "Verbena is a fun web application that facilitates the search of makeup products by connecting users directly with the shades and products used to create a certain makeup look. Connected to a postgresql database and soon web services, the data is fetched and displayed dynamically to the users. Users are able to create a profile and share make up looks or just have an account to save their favorite looks, products, or shades.",
-    "url": ""
+    "url": "https://catalinas-colors.herokuapp.com/"
   },
   {
     "id": 3,
@@ -92,6 +92,6 @@
     ],
     "additional": ["UI-Router"],
     "description": "The page you are viewing right now, my portfolio, is my first Angular JS project. This single page web application displays the information asynchronously from a data file to the user. UI-router is used for the routes while Bootstrap and some custom CSS are used to customize the views. The user can view a list of the projects and click on the link to view the actual page.",
-    "url": ""
+    "url": "http://www.rubyneer.com"
   }
 ]}

@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald:300,700" rel="stylesheet">
     <link rel='icon' type='image/x-icon' href='favicon.ico' />
@@ -13,40 +14,41 @@
   <body>
 
     <div class="container-fluid">
+      <div class="title text-center">
+        <h1>Catalina Astengo</h1>
+        <p>Full-Stack Web Developer</p>
+        <div class="center-block">
+          <div class="little-circle"></div>
+          <div class="little-circle"></div>
+          <div class="little-circle"></div>
+        </div>
+      </div>
+      <div class="social-media">
+        <a href="https://www.linkedin.com/in/catalinaastengo"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+        <a href="https://github.com/castengo"><i class="fa fa-github" aria-hidden="true"></i></a>
+      </div>
+      <div class="mobile-nav text-center">
+        <a class="square" ui-sref="home" ui-sref-active="active">
+          <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+        </a>
+        <a class="square" ui-sref="projects" ui-sref-active="active">
+          <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>
+        </a>
+        <a class="square" ui-sref='courses' ui-sref-active="active">
+          <span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span>
+        </a>
+        <a class="square" ui-sref='section({title: "Education"})' ui-sref-active="active">
+          <span class="glyphicon glyphicon-education" aria-hidden="true"></span>
+        </a>
+        <a class="square" ui-sref='section({title: "Experience"})' ui-sref-active="active">
+          <span class="glyphicon glyphicon-grain" aria-hidden="true"></span>
+        </a>
+        <a class="square" ui-sref="contact" ui-sref-active="active">
+          <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+        </a>
+      </div>
+
       <div class="row">
-        <div class="col-md-12">
-          <div class="title text-center">
-            <h1>Catalina Astengo</h1>
-            <p>Full-Stack Web Developer</p>
-            <div class="center-block">
-              <div class="little-circle"></div>
-              <div class="little-circle"></div>
-              <div class="little-circle"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="mobile-nav text-center">
-          <a class="square" ui-sref="home" ui-sref-active="active">
-            <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-          </a>
-          <a class="square" ui-sref="projects" ui-sref-active="active">
-            <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>
-          </a>
-          <a class="square" ui-sref='section({title: "Courses"})' ui-sref-active="active">
-            <span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span>
-          </a>
-          <a class="square" ui-sref='section({title: "Education"})' ui-sref-active="active">
-            <span class="glyphicon glyphicon-education" aria-hidden="true"></span>
-          </a>
-          <a class="square" ui-sref='section({title: "Experience"})' ui-sref-active="active">
-            <span class="glyphicon glyphicon-grain" aria-hidden="true"></span>
-          </a>
-          <a class="square" ui-sref="contact" ui-sref-active="active">
-            <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
-          </a>
-        </div>
-
         <div class="my-nav col-md-3">
             <a ui-sref="home" ui-sref-active="active">
               <div class="circle"><p>Home</p></div>
@@ -54,7 +56,7 @@
             <a ui-sref="projects" ui-sref-active="active">
               <div class="circle"><p>Projects</p></div>
             </a>
-            <a ui-sref='section({title: "Courses"})' ui-sref-active="active">
+            <a ui-sref='courses' ui-sref-active="active">
               <div class="circle"><p>Courses</p></div>
             </a>
         </div>
