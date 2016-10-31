@@ -8,10 +8,10 @@
     </div>
   </div>
   <div class="project-list">
-    <projects project-list="projectList.projectList" ></projects>
+    <project ng-repeat="project in projectList.projectList" project="project"></project>
   </div>
   <div class="mobile-project-list">
-    <mobile-projects project-list="projectList.projectList"></mobile-projects>
+    <project-mobile ng-repeat="project in projectList.projectList" project="project"></project-mobile>
   </div>
   <div ui-view='projectDetail'>
     <i>Select a project to view more details!</i>

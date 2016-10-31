@@ -1,0 +1,13 @@
+
+<div class="project-description container-fluid">
+  <h2>{{ $ctrl.project.name }}</h2>
+  <p>{{ $ctrl.project.description }}</p>
+  <div class="frameworks text-center">
+    <span ng-repeat="framework in $ctrl.project.frameworks">
+      <img ng-src="{{framework.logo_url}}" alt="{{framework.name}}">
+    </span>
+  </div>
+  <div class="text-center">
+    <a href="{{$ctrl.project.url}}" target="_blank" class="btn btn-default">View this website!</a>
+  </div>
+</div>
