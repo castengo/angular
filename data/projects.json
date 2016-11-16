@@ -62,7 +62,7 @@
       }],
     "additional": ["devise", "postgresql"],
     "description": "Verbena is a fun web application that facilitates the search of makeup products by connecting users directly with the shades and products used to create a certain makeup look. Connected to a postgresql database and soon web services, the data is fetched and displayed dynamically to the users. Users are able to create a profile and share make up looks or just have an account to save their favorite looks, products, or shades.",
-    "url": "https://catalinas-colors.herokuapp.com/"
+    "url": "https://verbena-makeup.herokuapp.com/"
   },
   {
     "id": 3,
